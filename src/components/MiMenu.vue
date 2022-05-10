@@ -1,16 +1,8 @@
 <template>
   <nav class="main-menu">
     <router-link to="/">Sobre mi</router-link>
-
-    
-
-    <router-link to="/about">Contacto</router-link>
-
-    
-
-    <router-link to="/about">Random</router-link>
-
-    
+    <router-link to="/contacto">Contacto</router-link>
+    <router-link to="/about">Random</router-link>    
   </nav>
 </template>
 
@@ -24,14 +16,15 @@
 }
 
 .main-menu {
-  /* border: 1px solid black; */
+  display: flex;
+
   background-image: linear-gradient(
     to bottom right,
     rgba(255, 255, 159, 1),
     rgba(240, 255, 0, 1)
   );
-  display: flex;
 
+  
   align-items: center;
   justify-content: center;
 
@@ -40,7 +33,7 @@
 }
 .main-menu a {
   text-decoration: none;
-  padding: 0.8em;
+  padding: 0.85em;
   color: black;
   
 }

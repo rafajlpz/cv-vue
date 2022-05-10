@@ -1,9 +1,7 @@
 <template>
-  <nav>
-  <MiMenu/>
-  </nav>
+  <mi-menu></mi-menu>
   <router-view/>
-  <mis-datos></mis-datos>
+  <mi-footer></mi-footer>
 </template>
 
 <style>
@@ -20,6 +18,7 @@
 </style>
 <script setup>
 import MiMenu from './components/MiMenu.vue';
+import MiFooter from './components/MiFooter.vue';
 
 </script>
 
