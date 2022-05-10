@@ -1,5 +1,5 @@
 <template>
-<h1>Datos de contacto {{datos.Nombre}}</h1>
+<h1>{{datos.Nombre}}</h1>
 <div class="tarjeta-container"></div>
   
 </template>
