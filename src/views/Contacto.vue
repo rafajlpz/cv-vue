@@ -1,7 +1,9 @@
 <template>
-<h1>{{datos.Nombre}}</h1>
-<div class="tarjeta-container"></div>
-  
+<div class="container-body">
+    <h1>{{datos.Nombre}}</h1>
+    <div class="tarjeta-container">sdfsdfsafsa</div>
+    
+</div>
 </template>
 
 <script setup>
@@ -23,5 +25,10 @@ obtenerDatos()
 </script>
 
 <style>
-
+.tarjeta-container{
+    display: flex;
+    flex: wrap;
+    width: 5em;
+    border: 1em solid black;
+}
 </style>

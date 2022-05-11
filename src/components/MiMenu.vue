@@ -17,6 +17,7 @@
 
 .main-menu {
   display: flex;
+  height: fit-content;
 
   background-image: linear-gradient(
     to bottom right,
@@ -28,7 +29,7 @@
   align-items: center;
   justify-content: center;
 
-  box-shadow: 0 0 10px black;
+  box-shadow: 0 0 0.8em black;
 
 }
 .main-menu a {
@@ -41,7 +42,7 @@
 .main-menu a:hover {
   
   background-color: rgb(252, 252, 252);
-  box-shadow: rgb(0 0 0 / 30%) 0px 0px 2px, rgb(231 238 236) 0px 0px 0px 0.75px;
+  box-shadow: rgb(0 0 0 / 30%) 0 0 2px, rgb(231 238 236) 0 0 0 0.75px;
 }
 
 
