@@ -46,7 +46,6 @@
         autem aut ducimus dolore.
       </p>
     </div>
-
   </div>
 </template>
 
@@ -62,8 +61,6 @@ body {
   font-family: "Crimson Pro";
   font-size: 18px;
 }
-
-
 </style>
 
 <script setup>
