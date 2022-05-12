@@ -18,6 +18,10 @@
 .main-menu {
   display: flex;
   height: fit-content;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
 
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-size: 1.15rem;
@@ -51,5 +55,3 @@
 
 
 </style>
-
-

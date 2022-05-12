@@ -1,6 +1,7 @@
 <template>
   <mi-menu></mi-menu>
   <router-view/>
+  
   <mi-footer></mi-footer>
 </template>
 
@@ -16,7 +17,8 @@
 #app{
   display: grid;
   /* auto lo que necesita, 1fr estira todo lo que pueda, y el auto lo mismo que el primero */
-  grid-template-rows: auto 1fr auto; 
+  grid-template-rows:  1fr auto; 
+
   
   
 
@@ -25,6 +27,9 @@
   min-height: 100vh;
 
 
+}
+body{
+  margin-top: 4.5rem;
 }
 </style>
 <script setup>

@@ -6,9 +6,11 @@
 </script>
 
 <style>
+
+
 .main-footer {
-  display: flex;
-  height: fit-content;
+  margin-top: 1rem;
+  
 
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-size: 0.85rem;  
