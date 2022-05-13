@@ -12,25 +12,30 @@
       </div>
     </div>
 
-
-    
-
-
     <div class="lenguajes">
       <div class="description-texto1">
         <h2>Front-end Developer</h2>
         <div class="experiencias">
-          <div class="adantia">
-            <p class="exp1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, vero? Id dolore expedita, maiores fuga doloremque iste voluptatum cupiditate ut ipsum ab animi, asperiores quis tempore possimus nam molestias unde vero enim, dolores laborum vel! Explicabo animi nulla ea iste ipsam officia earum consectetur temporibus praesentium odio? Cumque, molestias voluptatum! Ipsum quasi illum enim consequuntur voluptate </p>
-          </div><br>
-          <div class="cersia">
-            <p class="exp2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia aliquid aut optio enim, excepturi nobis sit? Dolores animi dicta et?</p>
+          <div class="caja-iconos">
+            <li><i class="fa-brands fa-html5"></i></li>
+            <li><i class="fa-brands fa-css3"></i></li>
+            <li><i class="fa-brands fa-js"></i></li>
+            <li><i class="fa-brands fa-vuejs"></i></li>
           </div>
+          <p class="exp1">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, vero?
+            Id dolore expedita, maiores fuga doloremque iste voluptatum
+            cupiditate ut ipsum ab animi, asperiores quis tempore possimus nam
+            molestias unde vero enim, dolores laborum vel! Explicabo animi nulla
+            ea iste ipsam officia earum consectetur temporibus praesentium odio?
+            Cumque, molestias voluptatum! Ipsum quasi illum enim consequuntur
+            voluptate
+          </p>
+
+          
         </div>
       </div>
     </div>
-
-  
 
     <div class="laboral">
       <div class="description-texto2">
@@ -42,10 +47,6 @@
         </p>
       </div>
     </div>
-
-
-  
-
 
     <div class="formacion">
       <div class="description-texto2">
@@ -68,12 +69,15 @@
   margin-right: auto;
 
   max-width: 62.5rem;
-  height: 100%;
+  
   background-color: rgba(174, 194, 194, 0.4);
   display: grid;
-  grid-template-columns: repeat(4,1fr);
+  grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(3, auto);
-  grid-template-areas: "sobremi sobremi sobremi sobremi";
+  grid-template-areas:
+    "sobremi sobremi sobremi sobremi"
+    "lenguajes lenguajes lenguajes lenguajes"
+    "laboral laboral formacion formacion";
 }
 
 .sobremi {
@@ -90,17 +94,17 @@
   width: 8rem;
 }
 
-.laboral {
+.lenguajes {
   display: flex;
-
+  grid-area: lenguajes;
   margin: auto;
   width: 95%;
   padding: 0.75em;
 }
 
-.lenguajes {
+.laboral {
   display: flex;
-
+  grid-area: laboral;
   margin: auto;
   width: 95%;
   padding: 0.75em;
@@ -108,7 +112,7 @@
 
 .formacion {
   display: flex;
-
+  grid-area: formacion;
   margin: auto;
   width: 95%;
   padding: 0.75em;
@@ -125,12 +129,23 @@ h2 {
   border-end-end-radius: 10rem;
   background-color: rgba(173, 216, 230, 0.25);
 }
+ .caja-iconos{
+  list-style: none;
+  display: flex;
+ flex-direction: row;
+ justify-content: center;
+}
+li {
+ padding: 2rem;
+ 
 
-hr {
+}
+
+/* hr {
   color: aquamarine;
   margin-top: 0.7rem;
   margin-bottom: 0.7rem;
   margin-left: 2.1rem;
   margin-right: 2.1rem;
-}
+} */
 </style>
