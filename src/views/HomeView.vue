@@ -5,9 +5,7 @@
       <div class="imagen-description">
         <h2>Sobre mi</h2>
         <p>
-          Intento de programador junior con conocimientos de html5, css, js y
-          vue. Amante de los juegos online siendo antiguo jugador 'profesional'
-          de e-sports en Counter-Strike, ahora me dedico a picar codigo
+         {{data.Descripcion}}
         </p>
       </div>
     </div>
@@ -31,8 +29,6 @@
             Cumque, molestias voluptatum! Ipsum quasi illum enim consequuntur
             voluptate
           </p>
-
-          
         </div>
       </div>
     </div>
@@ -69,7 +65,7 @@
   margin-right: auto;
 
   max-width: 62.5rem;
-  
+
   background-color: rgba(174, 194, 194, 0.4);
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -123,22 +119,22 @@ h2 {
   justify-content: center;
   align-items: center;
 
+  margin: auto;
+
   padding: 0.25rem;
   margin-bottom: 0.7rem;
   border-start-start-radius: 10rem;
   border-end-end-radius: 10rem;
   background-color: rgba(173, 216, 230, 0.25);
 }
- .caja-iconos{
+.caja-iconos {
   list-style: none;
   display: flex;
- flex-direction: row;
- justify-content: center;
+  flex-direction: row;
+  justify-content: center;
 }
 li {
- padding: 2rem;
- 
-
+  padding: 2rem;
 }
 
 /* hr {
@@ -149,3 +145,20 @@ li {
   margin-right: 2.1rem;
 } */
 </style>
+
+<script setup>
+import {ref} from 'vue';
+let data = ref({});
+
+
+const obtenerDatos = async () => {
+  try {
+    const response = await fetch('https://raw.githubusercontent.com/rafajlpz/lectura-json/main/datos.json');
+  data.value = await response.json();
+  console.log (data);
+  } catch (error) {
+    console.log(error)
+  }
+}
+obtenerDatos();
+</script>
