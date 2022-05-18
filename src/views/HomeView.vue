@@ -43,7 +43,6 @@
         </p>
       </div>
     </div>
-
     <div class="formacion">
       <div class="description-texto2">
         <h2>Formacion</h2>
@@ -56,8 +55,6 @@
     </div>
   </div>
 </template>
-
-<script></script>
 
 <style>
 .main-home {
@@ -147,6 +144,7 @@ li {
 </style>
 
 <script setup>
+
 import {ref} from 'vue';
 let data = ref({});
 
@@ -155,7 +153,7 @@ const obtenerDatos = async () => {
   try {
     const response = await fetch('https://raw.githubusercontent.com/rafajlpz/lectura-json/main/datos.json');
   data.value = await response.json();
-  console.log (data);
+  
   } catch (error) {
     console.log(error)
   }
