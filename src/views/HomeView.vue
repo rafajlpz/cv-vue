@@ -74,7 +74,8 @@
 }
 
 .sobremi {
-  display: flex;
+  /* display: flex; */
+  
   margin: auto;
   width: 95%;
   padding: 0.75em;
@@ -82,19 +83,20 @@
 }
 .sobremi img{
   float: left;
+  
+  
   border-radius: 100%;
   height: 150px;  
 }
 .sobremi .imagen-description p{
-  display: flex;
   text-align: justify;
   width: 70%;
   margin-left: 150px;
   
-  /* border: solid 1px black; */
+  border: solid 1px black;
 }
 .lenguajes {
-  display: flex;
+  /* display: flex; */
   grid-area: lenguajes;
   margin: auto;
   width: 95%;
@@ -102,7 +104,7 @@
 }
 
 .laboral {
-  display: flex;
+  /* display: flex; */
   grid-area: laboral;
   margin: auto;
   width: 95%;
@@ -110,7 +112,7 @@
 }
 
 .formacion {
-  display: flex;
+  /* display: flex; */
   grid-area: formacion;
   margin: auto;
   width: 95%;
