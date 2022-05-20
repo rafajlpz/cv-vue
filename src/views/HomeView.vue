@@ -1,9 +1,9 @@
 <template>
   <div class="main-home">
     <div class="sobremi">
-      <!-- <img src="../assets/alpaquita.jpg" alt="" /> -->
       <div class="imagen-description">
         <h2>Sobre mi</h2>
+        <img src="../assets/alpaquita.jpg" alt="" />
         <p>
          {{data.Descripcion}}
         </p>
@@ -80,13 +80,19 @@
   padding: 0.75em;
   grid-area: sobremi;
 }
-.imagen-container img {
-  /* border: 2px solid black; */
-  border-radius: 10px;
-  height: 10rem;
-  width: 8rem;
+.sobremi img{
+  float: left;
+  border-radius: 100%;
+  height: 150px;  
 }
-
+.sobremi .imagen-description p{
+  display: flex;
+  text-align: justify;
+  width: 70%;
+  margin-left: 150px;
+  
+  /* border: solid 1px black; */
+}
 .lenguajes {
   display: flex;
   grid-area: lenguajes;
