@@ -1,8 +1,8 @@
 <template>
   <nav class="main-menu">
     <router-link to="/">
-    <fonticon icon="laptop-code"></fonticon></router-link>
-    <router-link to="/contacto">Contacto</router-link>
+    Curriculum</router-link>
+    <router-link to="/contacto">Ficha</router-link>
     <router-link to="/about">Random</router-link>    
   </nav>
 </template>

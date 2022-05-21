@@ -6,6 +6,8 @@
         <img src="../assets/alpaquita.jpg" alt="" />
         <p>
          {{data.Descripcion}}
+         <hr>
+         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae cupiditate minima quam placeat, repudiandae facilis necessitatibus ea omnis totam suscipit, quisquam, impedit nobis hic expedita esse! Reiciendis incidunt aspernatur veniam? Repellendus, animi nemo at voluptas laborum neque fugiat minus quibusdam eaque excepturi porro velit possimus eligendi voluptatibus, officia quam veritatis illo eveniet tempora dolore beatae. Saepe nemo itaque beatae iure.
         </p>
       </div>
     </div>
@@ -39,7 +41,6 @@
         <div class="experiencias">
           <li>{{data.Experiencia.Exp1}}</li>
           <li>{{data.Experiencia.Exp2}}</li>
-
         </div>
       </div>
     </div>
@@ -78,8 +79,7 @@
 }
 
 .sobremi {
-  display: flex;
-  
+  /* display: flex;   */
   margin: auto;
   width: 95%;
   padding: 0.75em;
@@ -88,8 +88,11 @@
 }
 .sobremi img{
   float: left;
-    
-  border-radius: 100%;
+  border: 1px solid #ddd;
+  margin-top: 0.5rem;
+  /* width: 150px; */
+  padding: 0.25rem;
+  border-radius: 2%;
   height: 150px; 
    
 }
@@ -97,13 +100,17 @@
   text-align: justify;
   width: 70%;
   margin: auto;
+  margin-top: 1.5rem;
+  padding: 0.25rem;
+  height: 150px;
   
-  border: solid 1px black;
+  
+  /* border: solid 1px black; */
 }
 
 
 .lenguajes {
-  /* display: flex; */
+  /* display: flex; */  
   grid-area: lenguajes;
   margin: auto;
   width: 95%;
@@ -119,10 +126,12 @@
   width: 95%;
   padding: 0.75em;
 }
+.laboral .experiencias{
+  width: 80%;
+  margin-left: 2rem;
+}
 .laboral .experiencias li{
   list-style-type: square;
-  
-
 }
 
 
@@ -134,9 +143,13 @@
   width: 95%;
   padding: 0.75em;
 }
+.formacion .titulos{
+/* border: 1px solid black; */
+margin-left: 2rem;
+width: 50%;
+}
 .formacion .titulos li{
   list-style-type:square;
-  /* margin: auto; */
 }
 
 
@@ -144,7 +157,7 @@
 h2 {
   display: flex;
   justify-content: center;
-  align-items: center;
+  
 
   margin: auto;
 
@@ -157,10 +170,10 @@ h2 {
 
 
 .caja-iconos {
-  list-style: none;
   display: flex;
-  flex-direction: row;
   justify-content: center;
+  list-style: none;
+  flex-direction: row;
 }
 .caja-iconos li {
   padding: 2rem;
