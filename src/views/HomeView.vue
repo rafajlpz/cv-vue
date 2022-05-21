@@ -36,27 +36,31 @@
     <div class="laboral">
       <div class="description-texto2">
         <h2>Experiencia laboral</h2>
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo deserunt
-          perspiciatis accusamus mollitia expedita animi error officiis impedit
-          ea aliquam esse consequuntur incidunt, recusandae eaque tempora cul
-        </p>
+        <div class="experiencias">
+          <li>{{data.Experiencia.Exp1}}</li>
+          <li>{{data.Experiencia.Exp2}}</li>
+
+        </div>
       </div>
     </div>
+
+
     <div class="formacion">
       <div class="description-texto2">
         <h2>Formacion</h2>
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo deserunt
-          perspiciatis accusamus mollitia expedita animi error officiis impedit
-          ea aliquam esse consequuntur incidunt, recusandae eaque tempora cul
-        </p>
+        <div class="titulos">
+          <li>{{data.Formacion.Titulo3}}</li>
+          <li>{{data.Formacion.Titulo1}}</li>
+          <li>{{data.Formacion.Titulo4}}</li>
+          <li>{{data.Formacion.Titulo2}}</li>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <style>
+
 .main-home {
   margin-left: auto;
   margin-right: auto;
@@ -74,27 +78,30 @@
 }
 
 .sobremi {
-  /* display: flex; */
+  display: flex;
   
   margin: auto;
   width: 95%;
   padding: 0.75em;
   grid-area: sobremi;
+  
 }
 .sobremi img{
   float: left;
-  
-  
+    
   border-radius: 100%;
-  height: 150px;  
+  height: 150px; 
+   
 }
 .sobremi .imagen-description p{
   text-align: justify;
   width: 70%;
-  margin-left: 150px;
+  margin: auto;
   
   border: solid 1px black;
 }
+
+
 .lenguajes {
   /* display: flex; */
   grid-area: lenguajes;
@@ -103,21 +110,36 @@
   padding: 0.75em;
 }
 
+
 .laboral {
   /* display: flex; */
   grid-area: laboral;
   margin: auto;
+  height: 15rem;
   width: 95%;
   padding: 0.75em;
 }
+.laboral .experiencias li{
+  list-style-type: square;
+  
+
+}
+
 
 .formacion {
   /* display: flex; */
   grid-area: formacion;
   margin: auto;
+  height: 15rem;
   width: 95%;
   padding: 0.75em;
 }
+.formacion .titulos li{
+  list-style-type:square;
+  /* margin: auto; */
+}
+
+
 
 h2 {
   display: flex;
@@ -132,13 +154,15 @@ h2 {
   border-end-end-radius: 10rem;
   background-color: rgba(173, 216, 230, 0.25);
 }
+
+
 .caja-iconos {
   list-style: none;
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
-li {
+.caja-iconos li {
   padding: 2rem;
 }
 

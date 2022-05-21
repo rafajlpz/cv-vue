@@ -1,0 +1,23 @@
+{
+    "Nombre": "Rafael Idrogo Lopez",
+    "Edad": 28,
+    "Contacto":{
+        "Email": "frilo_94@hotmail.com",
+        "tlf": 648706727
+    },
+    
+    "Programacion": {
+        "front": "Front-end developer",
+        "back": "Back-end developer"
+    },
+    
+    "Descripcion": "Intento de programador junior con conocimientos de html5, css, js y vue. Amante de los juegos online siendo antiguo jugador 'profesional' de e-sports en Counter-Strike, ahora me dedico a picar codigo",
+    
+    "Formacion":{
+        "Titulo1": "DESARROLLO DE APLICACIONES CON TECNOLOGÍAS WEB",
+        "Titulo2": "EMPRENDIMIENTO Y VIDEOJUEGOS",
+        "Titulo3": "TÉCNICO GESTIÓN ADMINISTRATIVA",
+        "Titulo4": "DESARROLLO DE PRODUCTOS AUDIOVISUALES MULTIMEDIA INTERACTIVOS"
+    }  
+}
+
