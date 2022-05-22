@@ -27,17 +27,14 @@
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-size: 1.15rem;
 
-
   background-image: linear-gradient(
     to bottom right,
     rgba(255, 255, 159, 1),
     rgba(240, 255, 0, 1)
   );
-
   
   align-items: center;
   justify-content: center;
-
   box-shadow: 0 0 0.8em black;
 
 }

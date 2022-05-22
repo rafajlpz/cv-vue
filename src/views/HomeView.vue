@@ -5,31 +5,23 @@
         <h2>Sobre mi</h2>
         <img src="../assets/alpaquita.jpg" alt="" />
         <p>
-         {{data.Descripcion}}
-         <hr>
-         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae cupiditate minima quam placeat, repudiandae facilis necessitatibus ea omnis totam suscipit, quisquam, impedit nobis hic expedita esse! Reiciendis incidunt aspernatur veniam? Repellendus, animi nemo at voluptas laborum neque fugiat minus quibusdam eaque excepturi porro velit possimus eligendi voluptatibus, officia quam veritatis illo eveniet tempora dolore beatae. Saepe nemo itaque beatae iure.
+         {{data.Descripcion.SobreMi}}
         </p>
       </div>
     </div>
 
     <div class="lenguajes">
       <div class="description-texto1">
-        <h2>Front-end Developer</h2>
+        <h2>{{data.Programacion.front}}</h2>
         <div class="experiencias">
           <div class="caja-iconos">
-            <li><i class="fa-brands fa-html5"></i></li>
-            <li><i class="fa-brands fa-css3"></i></li>
-            <li><i class="fa-brands fa-js"></i></li>
-            <li><i class="fa-brands fa-vuejs"></i></li>
+            <li><img src="../assets/icons8-html-5-48.png" alt="html5"></li>
+            <li><img src="../assets/icons8-css3-48.png" alt=""></li>
+            <li><img src="../assets/icons8-javascript-48.png" alt=""></li>
+            <li><img src="../assets/icons8-vue-js-48.png" alt=""></li>
           </div>
           <p class="exp1">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, vero?
-            Id dolore expedita, maiores fuga doloremque iste voluptatum
-            cupiditate ut ipsum ab animi, asperiores quis tempore possimus nam
-            molestias unde vero enim, dolores laborum vel! Explicabo animi nulla
-            ea iste ipsam officia earum consectetur temporibus praesentium odio?
-            Cumque, molestias voluptatum! Ipsum quasi illum enim consequuntur
-            voluptate
+            {{data.Descripcion.FrontDescripcion}}
           </p>
         </div>
       </div>
@@ -93,11 +85,12 @@
   /* width: 150px; */
   padding: 0.25rem;
   border-radius: 2%;
-  height: 150px; 
+  height: 175px; 
    
 }
 .sobremi .imagen-description p{
   text-align: justify;
+  /* border: 1px solid black; */
   width: 70%;
   margin: auto;
   margin-top: 1.5rem;
