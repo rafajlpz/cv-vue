@@ -3,8 +3,10 @@
     <div class="sobremi">
       <div class="imagen-description">
         <h2>Sobre mi</h2>
+
         <img src="../assets/alpaquita.jpg" alt="" />
         <h4>{{ data.Nombre }}</h4>
+
         <p>
           {{ data.Descripcion.Sobremi }}
         </p>
@@ -59,6 +61,10 @@
 
   max-width: 62.5rem;
 
+  -webkit-box-shadow: 44px 29px 23px 6px rgba(161,156,161,0.62);
+-moz-box-shadow: 44px 29px 23px 6px rgba(161,156,161,0.62);
+box-shadow: 44px 29px 23px 6px rgba(161,156,161,0.62);
+
   background-color: rgba(174, 194, 194, 0.4);
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -93,7 +99,6 @@
   margin-top: 1.5rem;
   padding: 0.25rem;
   height: 150px;
-
   /* border: solid 1px black; */
 }
 
@@ -141,6 +146,7 @@
 h2 {
   display: flex;
   justify-content: center;
+  color: ghostwhite;
 
   margin: auto;
   /* border: solid black;  */
@@ -148,7 +154,16 @@ h2 {
   margin-bottom: 0.7rem;
   border-start-start-radius: 10rem;
   border-end-end-radius: 10rem;
-  background-color: rgba(173, 216, 230, 0.25);
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(116, 144, 165, 1) 0%,
+    rgba(118, 147, 167, 1) 26%,
+    rgba(111, 163, 180, 1) 77%,
+    rgba(173, 216, 230, 1) 95%
+  );
+
   -webkit-box-shadow: 0px 0px 8px 4px rgba(161, 156, 161, 1);
   -moz-box-shadow: 0px 0px 8px 4px rgba(161, 156, 161, 1);
   box-shadow: 0px 0px 8px 4px rgba(161, 156, 161, 1);
