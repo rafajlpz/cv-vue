@@ -61,9 +61,9 @@
 
   max-width: 62.5rem;
 
-  -webkit-box-shadow: 44px 29px 23px 6px rgba(161,156,161,0.62);
--moz-box-shadow: 44px 29px 23px 6px rgba(161,156,161,0.62);
-box-shadow: 44px 29px 23px 6px rgba(161,156,161,0.62);
+  -webkit-box-shadow: 44px 29px 23px 6px rgba(161, 156, 161, 0.62);
+  -moz-box-shadow: 44px 29px 23px 6px rgba(161, 156, 161, 0.62);
+  box-shadow: 44px 29px 23px 6px rgba(161, 156, 161, 0.62);
 
   background-color: rgba(174, 194, 194, 0.4);
   display: grid;
