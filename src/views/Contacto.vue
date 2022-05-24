@@ -1,31 +1,37 @@
 <template>
   <div class="container-body">
     <div class="tarjeta-container">
-      <h1></h1>
-      
-          <div class="footer-tarjeta" >github/rafajlpz</div>
-      </div>
-    </div>
+      <!-- <h1 v-for="(valor,index) in store.curriculum" :key="index">{{valor.titulo}}</h1> -->
+
+      {{store.curriculum[0].titulo}}
+
   
+      <div class="footer-tarjeta">github/rafajlpz</div>
+    </div>
+  </div>
 </template>
 
 <script setup>
-import { ref } from "vue";
+//Importacion el store de Pinia o variables centralizada de nuestra app
+import {useStoreDatosPersonales} from "@/store/datosPersonales.js";
 
-let datos = ref({});
+const store = useStoreDatosPersonales();
+store.setDatosCurriculum();
 
-const obtenerDatos = async () => {
-  try {
-    const response = await fetch(
-      "https://raw.githubusercontent.com/rafajlpz/lectura-json/main/datos.json"
-    );
-    datos.value = await response.json();
-    console.log(datos.value);
-  } catch (error) {
-    console.log(error, "Hay un error del fetch aqui");
-  }
-};
-obtenerDatos();
+// let datos = ref({});
+
+// const obtenerDatos = async () => {
+//   try {
+//     const response = await fetch(
+//       "https://raw.githubusercontent.com/rafajlpz/lectura-json/main/datos.json"
+//     );
+//     datos.value = await response.json();
+//     console.log(datos.value);
+//   } catch (error) {
+//     console.log(error, "Hay un error del fetch aqui");
+//   }
+// };
+// obtenerDatos();
 </script>
 
 <style>
@@ -49,16 +55,11 @@ obtenerDatos();
   box-shadow: 1.1em 1.2em 1.5em rgba(151, 140, 140, 0.5);
 }
 .footer-tarjeta {
-    
-
-    display: flex;
-    height: 25%;
-    background-color: rgba(216, 118, 37, 0.671);
-    margin-top: auto;
-    justify-content: center;
-    align-items: center;
-    
-   
-  
+  display: flex;
+  height: 25%;
+  background-color: rgba(216, 118, 37, 0.671);
+  margin-top: auto;
+  justify-content: center;
+  align-items: center;
 }
 </style>
