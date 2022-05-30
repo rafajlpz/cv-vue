@@ -81,7 +81,6 @@
 
 .sobremi {
   display: flex;
-  /* display: grid; */
   overflow: auto;
   margin: auto;
   width: 95%;
@@ -109,16 +108,18 @@
 }
 
 .lenguajes {
-  /* display: flex; */
+  display: flex;
+  overflow: auto;
   grid-area: lenguajes;
-  /* overflow: auto; */
+  
   margin: auto;
   width: 95%;
   padding: 0.75em;
 }
 
 .laboral {
-  /* display: flex; */
+  display: flex;
+  overflow: auto;
   grid-area: laboral;
   margin: auto;
   height: 15rem;
@@ -136,6 +137,7 @@
 
 .formacion {
   display: flex;
+  overflow: auto;
   grid-area: formacion;
   margin: auto;
   height: 15rem;
@@ -157,13 +159,14 @@ h2 {
   justify-content: center;
   color: ghostwhite;
 
-  margin: auto;
-  /* border: solid black;  */
-  padding: 0.25rem;
+  overflow: auto;
+  
+
+  padding: .5rem;
   margin-bottom: 0.7rem;
   border-start-start-radius: 10rem;
   border-end-end-radius: 10rem;
-  background: rgb(2, 0, 36);
+  
   background: linear-gradient(
     90deg,
     rgba(2, 0, 36, 1) 0%,
@@ -179,12 +182,12 @@ h2 {
 }
 
 .nombre {
-  /* border: 1px solid black; */
+ 
   width: fit-content;
   padding: 5px;
   border-radius: 8px;
 
-  /* text-decoration: overline underline; */
+  
   box-shadow: 0.5px 0.5px inset;
 
   display: flex;
@@ -192,19 +195,18 @@ h2 {
   margin-left: 8rem;
   margin-top: 1.5rem;
 
-  /* background: linear-gradient(to top,lightblue, white ) */
-
-  /* align-items: center; */
+  
 }
 
 .caja-iconos {
   display: flex;
-  /* overflow: auto; */
+  overflow: auto;
   justify-content: center;
   list-style: none;
   flex-direction: row;
 }
 .caja-iconos li {
+  
   padding: 2rem;
 }
 
