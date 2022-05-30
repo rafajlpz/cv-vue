@@ -4,6 +4,9 @@
       <!-- <h1 v-for="(valor,index) in store.curriculum" :key="index">{{valor.titulo}}</h1> -->
 
       {{store.curriculum[0].titulo}}
+      <br>
+      {{store.curriculum[1].titulo}}
+
 
   
       <div class="footer-tarjeta">github/rafajlpz</div>

@@ -5,7 +5,7 @@ defineStore(
     {
         state:()=>{
             return{
-                curriculum:
+                curriculum
             }
         }
     }

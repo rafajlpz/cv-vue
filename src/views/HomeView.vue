@@ -5,7 +5,7 @@
         <h2>Sobre mi</h2>
 
         <img src="../assets/alpaquita.jpg" alt="" />
-        <h4>{{ data.Nombre }}</h4>
+        <h4 class="nombre">{{ data.Nombre }}</h4>
 
         <p>
           {{ data.Descripcion.Sobremi }}
@@ -19,9 +19,11 @@
         <div class="experiencias">
           <div class="caja-iconos">
             <li><img src="../assets/icons8-html-5-48.png" alt="html5" /></li>
-            <li><img src="../assets/icons8-css3-48.png" alt="" /></li>
-            <li><img src="../assets/icons8-javascript-48.png" alt="" /></li>
-            <li><img src="../assets/icons8-vue-js-48.png" alt="" /></li>
+            <li><img src="../assets/icons8-css3-48.png" alt="css3" /></li>
+            <li><img src="../assets/icons8-javascript-48.png" alt="javascript" /></li>
+            <li><img src="../assets/icons8-vue-js-48.png" alt="vue" /></li>
+            <li><img src="../assets/icons8-git-48.png" alt="git" /></li>
+            
           </div>
           <p class="exp1">
             {{ data.Descripcion.FrontDescripcion }}
@@ -56,6 +58,7 @@
 
 <style>
 .main-home {
+  
   margin-left: auto;
   margin-right: auto;
 
@@ -73,10 +76,13 @@
     "sobremi sobremi sobremi sobremi"
     "lenguajes lenguajes lenguajes lenguajes"
     "laboral laboral formacion formacion";
+  
 }
 
 .sobremi {
-  /* display: flex;   */
+  display: flex;  
+  /* display: grid; */
+  overflow: auto;
   margin: auto;
   width: 95%;
   padding: 0.75em;
@@ -105,6 +111,7 @@
 .lenguajes {
   /* display: flex; */
   grid-area: lenguajes;
+  /* overflow: auto; */
   margin: auto;
   width: 95%;
   padding: 0.75em;
@@ -124,6 +131,8 @@
 }
 .laboral .experiencias li {
   list-style-type: square;
+  padding: 5px;
+
 }
 
 .formacion {
@@ -141,6 +150,7 @@
 }
 .formacion .titulos li {
   list-style-type: square;
+  padding: 5px;
 }
 
 h2 {
@@ -169,8 +179,28 @@ h2 {
   box-shadow: 0px 0px 8px 4px rgba(161, 156, 161, 1);
 }
 
+.nombre{
+  /* border: 1px solid black; */
+  width: fit-content;
+  padding:5px;
+  border-radius: 8px;
+
+  /* text-decoration: overline underline; */
+  box-shadow: .5px .5px inset;
+
+  display: flex;
+
+  margin-left: 8.8rem;
+  margin-top: 1.5rem;
+
+  /* background: linear-gradient(to top,lightblue, white ) */
+  
+  /* align-items: center; */ 
+}
+
 .caja-iconos {
   display: flex;
+  /* overflow: auto; */
   justify-content: center;
   list-style: none;
   flex-direction: row;
@@ -186,6 +216,22 @@ h2 {
   margin-left: 2.1rem;
   margin-right: 2.1rem;
 } */
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 1060px) {
+  body{
+    background: black;
+  
+
+  }
+  .main-home{
+    /* display: flex; */
+    display: grid;
+  max-width: 62.5rem;
+
+  }
+} 
+
 </style>
 
 <script setup>
