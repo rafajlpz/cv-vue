@@ -47,7 +47,8 @@
       <div class="description-texto2">
         <h2>Formacion</h2>
         <div class="titulos">
-          <li>{{ data.Formacion.Titulo3 }}</li>
+          
+          <li>{{store.curriculum[0].titulo}}</li>
           <li>{{ data.Formacion.Titulo1 }}</li>
           <li>{{ data.Formacion.Titulo4 }}</li>
           <li>{{ data.Formacion.Titulo2 }}</li>
@@ -230,6 +231,7 @@ h2 {
 
 <script setup>
 import { ref } from "vue";
+import {useStoreDatosPersonales} from "@/store/datosPersonales.js";
 let loading = ref(false);
 let data = ref({});
 
@@ -245,4 +247,14 @@ const obtenerDatos = async () => {
   loading.value = true;
 };
 obtenerDatos();
+
+
+
+
+
+const store = useStoreDatosPersonales();
+store.setDatosCurriculum();
+
+
+
 </script>
