@@ -20,10 +20,11 @@
           <div class="caja-iconos">
             <li><img src="../assets/icons8-html-5-48.png" alt="html5" /></li>
             <li><img src="../assets/icons8-css3-48.png" alt="css3" /></li>
-            <li><img src="../assets/icons8-javascript-48.png" alt="javascript" /></li>
+            <li>
+              <img src="../assets/icons8-javascript-48.png" alt="javascript" />
+            </li>
             <li><img src="../assets/icons8-vue-js-48.png" alt="vue" /></li>
             <li><img src="../assets/icons8-git-48.png" alt="git" /></li>
-            
           </div>
           <p class="exp1">
             {{ data.Descripcion.FrontDescripcion }}
@@ -58,7 +59,6 @@
 
 <style>
 .main-home {
-  
   margin-left: auto;
   margin-right: auto;
 
@@ -76,11 +76,10 @@
     "sobremi sobremi sobremi sobremi"
     "lenguajes lenguajes lenguajes lenguajes"
     "laboral laboral formacion formacion";
-  
 }
 
 .sobremi {
-  display: flex;  
+  display: flex;
   /* display: grid; */
   overflow: auto;
   margin: auto;
@@ -100,12 +99,12 @@
 .sobremi .imagen-description p {
   text-align: justify;
   /* border: 1px solid black; */
-  width: 70%;
-  margin: auto;
+  overflow: auto;
+  width: auto;
+  
   margin-top: 1.5rem;
+  margin-left: 8rem;
   padding: 0.25rem;
-  height: 150px;
-  /* border: solid 1px black; */
 }
 
 .lenguajes {
@@ -132,7 +131,6 @@
 .laboral .experiencias li {
   list-style-type: square;
   padding: 5px;
-
 }
 
 .formacion {
@@ -179,23 +177,23 @@ h2 {
   box-shadow: 0px 0px 8px 4px rgba(161, 156, 161, 1);
 }
 
-.nombre{
+.nombre {
   /* border: 1px solid black; */
   width: fit-content;
-  padding:5px;
+  padding: 5px;
   border-radius: 8px;
 
   /* text-decoration: overline underline; */
-  box-shadow: .5px .5px inset;
+  box-shadow: 0.5px 0.5px inset;
 
   display: flex;
 
-  margin-left: 8.8rem;
+  margin-left: 8rem;
   margin-top: 1.5rem;
 
   /* background: linear-gradient(to top,lightblue, white ) */
-  
-  /* align-items: center; */ 
+
+  /* align-items: center; */
 }
 
 .caja-iconos {
@@ -219,19 +217,15 @@ h2 {
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (max-width: 1060px) {
-  body{
+  body {
     background: black;
-  
-
   }
-  .main-home{
+  .main-home {
     /* display: flex; */
     display: grid;
-  max-width: 62.5rem;
-
+    max-width: 62.5rem;
   }
-} 
-
+}
 </style>
 
 <script setup>

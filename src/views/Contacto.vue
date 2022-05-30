@@ -21,6 +21,10 @@ import {useStoreDatosPersonales} from "@/store/datosPersonales.js";
 const store = useStoreDatosPersonales();
 store.setDatosCurriculum();
 
+// const leerDatos = async () =>  {
+
+// }
+
 // let datos = ref({});
 
 // const obtenerDatos = async () => {

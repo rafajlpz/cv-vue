@@ -1,6 +1,9 @@
 import { defineStore } from "pinia";
 import { db } from "../hook/firebase.config";
 import { collection, query, getDocs } from "firebase/firestore";
+import { ref } from "vue";
+
+
 
 export const useStoreDatosPersonales = defineStore(
 "datosPersonales",
@@ -17,9 +20,9 @@ export const useStoreDatosPersonales = defineStore(
          * Funcion que coge datos de firestone
          */
         async setDatosCurriculum() {              
-            const curriculumRef = collection(db, "curriculum");
-            const consulta = query(curriculumRef);
-            const resultadoConsulta = await getDocs(consulta);
+            let curriculumRef = collection(db, "curriculum");
+            let consulta = query(curriculumRef);
+            let resultadoConsulta = await getDocs(consulta);
             this.curriculum = [];
             resultadoConsulta.forEach(
                 (fila) => {
