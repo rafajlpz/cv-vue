@@ -108,7 +108,7 @@
 }
 
 .lenguajes {
-  display: flex;
+  /* display: flex; */
   overflow: auto;
   grid-area: lenguajes;
   
