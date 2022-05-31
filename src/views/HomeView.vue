@@ -1,5 +1,5 @@
 <template>
-  <div v-if="loading" class="main-home">
+  <div v-if="loading" class="main-home" >
     <div class="sobremi">
       <div class="imagen-description">
         <h2>Sobre mi</h2>
@@ -46,13 +46,12 @@
     <div class="formacion">
       <div class="description-texto2">
         <h2>Formacion</h2>
-        <div class="titulos">
-          
-          <li>{{store.curriculum[0].titulo}}</li>
-          <li>{{ data.Formacion.Titulo1 }}</li>
+        <ul class="titulos">
+          <li>{{(store.curriculum[0] && store.curriculum[0].titulo) ? store.curriculum[0].titulo:''}}</li>
+          <li>{{(store.curriculum[1] && store.curriculum[1].titulo) ? store.curriculum[1].titulo:''}}</li>
           <li>{{ data.Formacion.Titulo4 }}</li>
           <li>{{ data.Formacion.Titulo2 }}</li>
-        </div>
+        </ul>
       </div>
     </div>
   </div>
@@ -101,7 +100,7 @@
   /* border: 1px solid black; */
   overflow: auto;
   width: auto;
-  
+
   margin-top: 1.5rem;
   margin-left: 8rem;
   padding: 0.25rem;
@@ -111,7 +110,7 @@
   /* display: flex; */
   overflow: auto;
   grid-area: lenguajes;
-  
+
   margin: auto;
   width: 95%;
   padding: 0.75em;
@@ -160,13 +159,12 @@ h2 {
   color: ghostwhite;
 
   overflow: auto;
-  
 
-  padding: .5rem;
+  padding: 0.5rem;
   margin-bottom: 0.7rem;
   border-start-start-radius: 10rem;
   border-end-end-radius: 10rem;
-  
+
   background: linear-gradient(
     90deg,
     rgba(2, 0, 36, 1) 0%,
@@ -182,20 +180,16 @@ h2 {
 }
 
 .nombre {
- 
   width: fit-content;
   padding: 5px;
   border-radius: 8px;
 
-  
   box-shadow: 0.5px 0.5px inset;
 
   display: flex;
 
   margin-left: 8rem;
   margin-top: 1.5rem;
-
-  
 }
 
 .caja-iconos {
@@ -206,7 +200,6 @@ h2 {
   flex-direction: row;
 }
 .caja-iconos li {
-  
   padding: 2rem;
 }
 
@@ -233,7 +226,7 @@ h2 {
 
 <script setup>
 import { ref } from "vue";
-import {useStoreDatosPersonales} from "@/store/datosPersonales.js";
+import { useStoreDatosPersonales } from "@/store/datosPersonales.js";
 let loading = ref(false);
 let data = ref({});
 
@@ -250,13 +243,6 @@ const obtenerDatos = async () => {
 };
 obtenerDatos();
 
-
-
-
-
 const store = useStoreDatosPersonales();
 store.setDatosCurriculum();
-
-
-
 </script>
