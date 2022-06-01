@@ -1,8 +1,8 @@
 <template>
   <mi-menu></mi-menu>
   <router-view />
-
   <mi-footer></mi-footer>
+
 </template>
 
 <style>
