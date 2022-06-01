@@ -21,24 +21,7 @@ import {useStoreDatosPersonales} from "@/store/datosPersonales.js";
 const store = useStoreDatosPersonales();
 store.setDatosCurriculum();
 
-// const leerDatos = async () =>  {
 
-// }
-
-// let datos = ref({});
-
-// const obtenerDatos = async () => {
-//   try {
-//     const response = await fetch(
-//       "https://raw.githubusercontent.com/rafajlpz/lectura-json/main/datos.json"
-//     );
-//     datos.value = await response.json();
-//     console.log(datos.value);
-//   } catch (error) {
-//     console.log(error, "Hay un error del fetch aqui");
-//   }
-// };
-// obtenerDatos();
 </script>
 
 <style>

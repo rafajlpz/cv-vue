@@ -6,7 +6,7 @@ import { collection, query, getDocs } from "firebase/firestore";
 export const useStoreDatosPersonales = defineStore("datosPersonales", {
   state: () => {
     return {
-      curriculum: ['fdfdf'],
+      curriculum: [''],
       nombre: "",
     };
   },

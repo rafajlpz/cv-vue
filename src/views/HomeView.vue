@@ -1,5 +1,5 @@
 <template>
-  <div v-if="loading" class="main-home" >
+  <div v-if="loading" class="main-home">
     <div class="sobremi">
       <div class="imagen-description">
         <h2>Sobre mi</h2>
@@ -47,8 +47,20 @@
       <div class="description-texto2">
         <h2>Formacion</h2>
         <ul class="titulos">
-          <li>{{(store.curriculum[0] && store.curriculum[0].titulo) ? store.curriculum[0].titulo:''}}</li>
-          <li>{{(store.curriculum[1] && store.curriculum[1].titulo) ? store.curriculum[1].titulo:''}}</li>
+          <li>
+            {{
+              store.curriculum[0] && store.curriculum[0].titulo
+                ? store.curriculum[0].titulo
+                : ""
+            }}
+          </li>
+          <li>
+            {{
+              store.curriculum[1] && store.curriculum[1].titulo
+                ? store.curriculum[1].titulo
+                : ""
+            }}
+          </li>
           <li>{{ data.Formacion.Titulo4 }}</li>
           <li>{{ data.Formacion.Titulo2 }}</li>
         </ul>
@@ -58,6 +70,7 @@
 </template>
 
 <style>
+
 .main-home {
   margin-left: auto;
   margin-right: auto;
@@ -203,25 +216,16 @@ h2 {
   padding: 2rem;
 }
 
-/* hr {
-  color: aquamarine;
-  margin-top: 0.7rem;
-  margin-bottom: 0.7rem;
-  margin-left: 2.1rem;
-  margin-right: 2.1rem;
-} */
-
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (max-width: 1060px) {
+/* @media only screen and (max-width: 1060px) {
   body {
     background: black;
   }
   .main-home {
-    /* display: flex; */
     display: grid;
     max-width: 62.5rem;
   }
-}
+} */
 </style>
 
 <script setup>
