@@ -152,10 +152,12 @@
 .formacion {
   display: flex;
   overflow: scroll;
+
   overflow: -webkit-overflow-scrolling;  
+  -webkit-overflow-scrolling: touch;
+  
   scrollbar-width: none;
-  /* -webkit-overflow-scrolling: touch; */
-  /* scroll-behavior: smooth; */
+  scroll-behavior: smooth;
   grid-area: formacion;
   margin: auto;
   height: 15rem;
