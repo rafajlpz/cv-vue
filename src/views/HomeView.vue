@@ -146,10 +146,16 @@
   list-style-type: square;
   padding: 5px;
 }
-
+::-webkit-scrollbar{
+  display: none;
+}
 .formacion {
   display: flex;
-  overflow: auto;
+  overflow: scroll;
+  overflow: -webkit-overflow-scrolling;  
+  scrollbar-width: none;
+  /* -webkit-overflow-scrolling: touch; */
+  /* scroll-behavior: smooth; */
   grid-area: formacion;
   margin: auto;
   height: 15rem;
