@@ -1,7 +1,7 @@
 <template>
   <div class="contenedor">
     <div class="caja-formulario">
-      <h1 class="titulo-admin">Login administration</h1>
+      <h1 class="titulo-admin">Administracion</h1>
       {{ store.getEmailUser }}
       <br />
       <hr />
@@ -61,22 +61,17 @@ const desconectar = () => {
 <style>
 .contenedor {
   display: flex;
+
   align-items: center;
   justify-content: center;
   height: auto;
 }
 
 .caja-formulario {
-  border: 6px solid grey;
-
-  width: fit-content;
-  height: fit-content;
+  border: 1px solid grey;
   padding: 2rem;
   border-radius: 4px;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  
 }
 .control {
   display: flex;
@@ -103,7 +98,7 @@ const desconectar = () => {
   margin-bottom: 2rem;
   font-size: 2.5rem;
   text-shadow: 1rem 1rem 1.1rem;
-
+  
 }
 
 /* .input-grupo{
