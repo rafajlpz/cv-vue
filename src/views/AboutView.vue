@@ -61,6 +61,12 @@
 import { useStoreUsers } from "@/store/users";
 import { reactive, ref } from "vue";
 
+import {useStoreDatosPersonales} from "@/store/datosPersonales.js";
+
+const datos = useStoreDatosPersonales();
+datos.setDatosCurriculum();
+
+
 //Inicializar pinia
 const store = useStoreUsers();
 const form = reactive({

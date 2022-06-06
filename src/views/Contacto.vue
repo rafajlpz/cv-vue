@@ -3,12 +3,22 @@
     <div class="tarjeta-container">
       <!-- <h1 v-for="(valor,index) in store.curriculum" :key="index">{{valor.titulo}}</h1> -->
 
-      <!-- {{store.curriculum[0].titulo}}
-      <br>
-      {{store.curriculum[1].titulo}} -->
+      <h6 class="cssprueba">
+        {{
+          store.curriculum[0] && store.curriculum[0].titulo
+            ? store.curriculum[0].titulo
+            : ""
+        }}
+      </h6>
+      <br />
+      <h6 class="cssprueba">
+        {{
+          store.curriculum[1] && store.curriculum[1].titulo
+            ? store.curriculum[1].titulo
+            : ""
+        }}
+      </h6>
 
-
-  
       <div class="footer-tarjeta">github/rafajlpz</div>
     </div>
   </div>
@@ -16,12 +26,13 @@
 
 <script setup>
 //Importacion el store de Pinia o variables centralizada de nuestra app
-import {useStoreDatosPersonales} from "@/store/datosPersonales.js";
+import { useStoreDatosPersonales } from "@/store/datosPersonales.js";
+
+const datos = useStoreDatosPersonales();
+datos.setDatosCurriculum();
 
 const store = useStoreDatosPersonales();
 store.setDatosCurriculum();
-
-
 </script>
 
 <style>
@@ -51,5 +62,10 @@ store.setDatosCurriculum();
   margin-top: auto;
   justify-content: center;
   align-items: center;
+}
+.cssprueba{
+  background-color: red;
+  border: 1px solid black;
+  font-size: 1rem;
 }
 </style>
