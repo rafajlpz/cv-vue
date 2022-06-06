@@ -1,33 +1,41 @@
 import { defineStore } from "pinia";
 import { auth } from "@/hook/firebase.config";
-import { signInWithEmailAndPassword, signOut } from "firebase/auth";
+import { signInWithEmailAndPassword, signOut, onAuthStateChanged } from "firebase/auth";
+
+
 
 export const useStoreUsers = defineStore("users", {
   state: () => {
     return {
       user: null,
+
     };
   },
   getters:{
     getEmailUser: (state) =>{
-      return state.user && state.user.email ? state.user.email : "No hay nada";
+      return state.user && state.user.email ? state.user.email : "No hay usuarios";
     }
   }
   ,
   actions: {
-    signIn({ email, password }) {
-      signInWithEmailAndPassword(auth, email, password)
-        .then((userCredential) => {
-          // Signed in
-          this.user = userCredential.user;
+    async signIn({ email, password }) {
+    const userCredential = await signInWithEmailAndPassword(auth, email, password);
+    this.user = userCredential.user;
+    // response.value;
+    },
+    logged(){
+      onAuthStateChanged(auth, (user) => {
+        if (user) {
+          // User is signed in, see docs for a list of available properties
+          // https://firebase.google.com/docs/reference/js/firebase.User
+         this.user = user;
           // ...
-          // console.log(user);
-        })
-        .catch((error) => {
-          const errorCode = error.code;
-          const errorMessage = error.message;
-          console.log(errorCode, errorMessage);
-        });
+        } else {
+          // User is signed out
+          // ...
+          this.user = null;
+        }
+      });
     },
     logout() {
       signOut(auth)

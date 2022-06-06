@@ -31,4 +31,9 @@ body {
 <script setup>
 import MiMenu from "./components/MiMenu.vue";
 import MiFooter from "./components/MiFooter.vue";
+import {useStoreUsers} from './store/users'
+
+//Inicializar store
+const store = useStoreUsers();
+store.logged();
 </script>

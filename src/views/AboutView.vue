@@ -1,12 +1,18 @@
 <template>
   <div class="contenedor">
+    
     <div class="caja-formulario">
       <h1 class="titulo-admin">Administracion</h1>
       {{ store.getEmailUser }}
       <br />
       <hr />
       <br />
-      <form @submit.prevent="autentificar" action="#" id="myForm">
+      <form
+        class="myForm"
+        @submit.prevent="autentificar"
+        action="#"
+        id="myForm"
+      >
         <div class="control">
           <label for="email"> Correo electronico </label>
           <input
@@ -20,20 +26,31 @@
         <div class="control">
           <label for="password"> Contraseña </label>
           <input
-            class="inputs"
+            class="inputs uno"
             v-model="form.password"
             type="password"
             id="password"
           />
         </div>
         <br />
-        <button class="botones">Login</button>
+        <button :disabled="store.user === null ? false : true" class="botones">
+          Login
+        </button>
         <input
           class="botones"
           @click="desconectar"
           type="button"
           value="Logout"
         />
+        <br />
+        <strong>{{ store.errores }}</strong>
+        <div
+          v-if="validacionError"
+          class="error"
+          style="background-color: red; color: white"
+        >
+          Error: {{ validacionError }}
+        </div>
       </form>
     </div>
   </div>
@@ -42,7 +59,7 @@
 <script setup>
 //Importaciones
 import { useStoreUsers } from "@/store/users";
-import { reactive } from "vue";
+import { reactive, ref } from "vue";
 
 //Inicializar pinia
 const store = useStoreUsers();
@@ -50,11 +67,24 @@ const form = reactive({
   email: "frilo_94@hotmail.com",
   password: "123456",
 });
-const autentificar = () => {
-  store.signIn(form);
+
+const validacionError = ref(false);
+
+// const disabled = ref(false);
+
+const autentificar = async () => {
+  try {
+    validacionError.value = false;
+    await store.signIn(form);
+    
+  } catch (error) {
+    validacionError.value = error.message;
+    console.log(error);
+  }
 };
 const desconectar = () => {
   store.logout();
+  
 };
 </script>
 
@@ -71,20 +101,26 @@ const desconectar = () => {
   border: 1px solid grey;
   padding: 2rem;
   border-radius: 4px;
-  
 }
+
 .control {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   width: fit-content;
+
+  align-items: center;
 }
 .inputs {
   width: 100%;
   background: cornsilk;
+  display: flex;
   padding: 0.4rem;
   border-radius: 4px;
   margin-bottom: 1rem;
   border: 1px solid orange;
+}
+.uno {
+  margin-left: 10px;
 }
 .botones {
   /* border-radius: 4px; */
@@ -98,7 +134,6 @@ const desconectar = () => {
   margin-bottom: 2rem;
   font-size: 2.5rem;
   text-shadow: 1rem 1rem 1.1rem;
-  
 }
 
 /* .input-grupo{
