@@ -1,7 +1,7 @@
 <template>
-  <mi-menu></mi-menu>
+  <mi-menu :correo="store.getEmailUser"></mi-menu>
   <router-view />
-  <mi-footer></mi-footer>
+  <!-- <mi-footer></mi-footer> -->
 
 </template>
 
@@ -10,18 +10,14 @@
 *,
 *::before,
 *::after {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
-
-#app {
-  display: grid;
-  /* auto lo que necesita, 1fr estira todo lo que pueda, y el auto lo mismo que el primero */
-  grid-template-rows: 1fr auto;
-
-  padding: 0;
-  margin: 0;
-  min-height: 100vh;
+#app{
+  
 }
+
 body {
   font-size: 1.1rem;
   margin-top: 4.5rem;

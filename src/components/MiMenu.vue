@@ -3,18 +3,26 @@
     <router-link to="/">
     Curriculum</router-link>
     <router-link to="/contacto">Ficha</router-link>
-    <router-link to="/about">Random</router-link>    
+    <router-link to="/about">Random</router-link>
+    <span class="correo">{{correo}}</span> 
+    
+   
   </nav>
 </template>
 
-<script></script>
+<script setup>
+
+
+defineProps({
+  correo:{
+    type: String,
+    default: ""
+  }
+})
+  
+</script>
 
 <style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
 .main-menu {
   display: flex;
@@ -49,6 +57,15 @@
   
   background-color: rgb(252, 252, 252);
   box-shadow: rgb(0 0 0 / 30%) 0 0 2px, rgb(231 238 236) 0 0 0 0.75px;
+}
+
+.correo{
+  font-size: 0.9rem;
+  color: white;
+  background-color: green;
+  border: 1px solid white;
+  border-radius: 4px;
+  padding: 0.2rem;
 }
 
 

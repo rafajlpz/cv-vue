@@ -21,7 +21,7 @@ export const useStoreDatosPersonales = defineStore("datosPersonales", {
       this.curriculum = [];
       resultadoConsulta.forEach((fila) => {
         this.curriculum.push(fila.data());
-        console.log(fila.data(),'Id--->',fila.id)
+        // console.log(fila.data(),'Id--->',fila.id)
       });
     },
   },

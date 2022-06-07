@@ -9,8 +9,17 @@
 
 
 .main-footer {
-  margin-top: 1rem;
-  
+  /* margin-top: 1rem;
+  position:fixed; */
+  display: flex;
+  height: 100vh;
+  /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
+  /* grid-auto-rows: auto; */
+  /* grid-gap: 10px; */
+  /* margin: 0 auto; */
+  /* max-width: 100%; */
+  /* padding-left: 180px; */
+
 
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-size: 0.85rem;  

@@ -21,18 +21,42 @@
 
       <div class="footer-tarjeta">github/rafajlpz</div>
     </div>
+  <img :src="url" alt="Alpaquita">
   </div>
 </template>
 
 <script setup>
 //Importacion el store de Pinia o variables centralizada de nuestra app
+// import { getStorage } from  "@firebase/storage";
+
+// import {ref, getDownloadURL} from "@firebase/storage";
+
 import { useStoreDatosPersonales } from "@/store/datosPersonales.js";
+import { getURL } from "@/hook/firebase.cloud";
+import {ref} from "vue";
+
+const url = ref("");
+
+
 
 const datos = useStoreDatosPersonales();
 datos.setDatosCurriculum();
 
 const store = useStoreDatosPersonales();
 store.setDatosCurriculum();
+
+
+(async ()=>{
+  try {
+    url.value = await getURL();
+  } catch (error) {
+    alert(error.message)
+  }
+
+})();
+
+
+
 </script>
 
 <style>
