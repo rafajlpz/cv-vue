@@ -53,6 +53,7 @@
         </div>
       </form>
     </div>
+    <img :src="url">
   </div>
 </template>
 
@@ -60,11 +61,14 @@
 //Importaciones
 import { useStoreUsers } from "@/store/users";
 import { reactive, ref } from "vue";
+import { getURL } from "@/hook/firebase.cloud";
 
 import {useStoreDatosPersonales} from "@/store/datosPersonales.js";
 
 const datos = useStoreDatosPersonales();
 datos.setDatosCurriculum();
+
+
 
 
 //Inicializar pinia
@@ -90,8 +94,17 @@ const autentificar = async () => {
 };
 const desconectar = () => {
   store.logout();
-  
 };
+
+const url = ref("");
+(async ()=>{
+  try {
+    url.value = await getURL();
+  } catch (error) {
+    alert(error.message)
+  }
+
+})();
 </script>
 
 <style>
