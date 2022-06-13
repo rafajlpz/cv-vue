@@ -53,7 +53,7 @@
         </div>
       </form>
     </div>
-    <img :src="url">
+    <!-- <img :src="url"> -->
   </div>
 </template>
 
