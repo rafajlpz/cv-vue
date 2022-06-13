@@ -2,6 +2,7 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 import { getAuth} from "firebase/auth";
+//Cloud Storage
 import { getStorage } from "firebase/storage";
 // import { getStorage}  from "firebase/storage";
 

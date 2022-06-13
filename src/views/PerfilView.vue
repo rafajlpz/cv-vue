@@ -6,10 +6,13 @@
 </template>
 
 <script setup>
-import TheUploader from '@/components/TheUploader.vue'
+import TheUploader from '@/components/TheUploader.vue';
+import {defineStore} from "../store/datosPersonales"
 
 const gestionarFichero = (imagen) =>{
-    console.log('Te escucho', imagen)
+    if(imagen){
+        store.subirFoto(imagen)
+    }
 }
 </script>
 

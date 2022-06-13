@@ -1,16 +1,26 @@
 import { defineStore } from "pinia";
 import { db } from "../hook/firebase.config";
 import { collection, query, getDocs } from "firebase/firestore";
-
+import { storage } from "../hook/firebase.config";
+import { normalizeClass } from "vue";
+import { ref, uploadBytes } from "firebase/storage";
 
 export const useStoreDatosPersonales = defineStore("datosPersonales", {
   state: () => {
     return {
-      curriculum: [''],
+      curriculum: [""],
       nombre: "",
+      miFoto: null,
     };
   },
   actions: {
+    subirFoto(file) {
+      const storageRef = ref(storage, "some-child");
+
+      uploadBytes(storageRef, file).then((snapshot) => {
+        console.log("Subido el archivo!");
+      });
+    },
     /**
      * Funcion que coge datos de firestone
      */
@@ -41,6 +51,5 @@ export const useStoreDatosPersonales = defineStore("datosPersonales", {
     },
   },
 });
-
 
 // {{(store.curriculum[0] && store.curriculum[0].titulo)?store.curriculum[0].titulo:''}}
