@@ -12,7 +12,13 @@
   /* margin-top: 1rem;
   position:fixed; */
   display: flex;
-  height: 100vh;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  
+  /* flex-direction: column; */
+  /* height: 100vh; */
   /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
   /* grid-auto-rows: auto; */
   /* grid-gap: 10px; */

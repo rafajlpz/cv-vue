@@ -113,7 +113,7 @@ const url = ref("");
 
   align-items: center;
   justify-content: center;
-  height: auto;
+  
 }
 
 .caja-formulario {

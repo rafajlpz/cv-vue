@@ -16,3 +16,6 @@ const gestionarFichero = (imagen) =>{
 }
 </script>
 
+<style>
+
+</style>

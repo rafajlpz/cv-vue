@@ -2,7 +2,6 @@ import { defineStore } from "pinia";
 import { db } from "../hook/firebase.config";
 import { collection, query, getDocs } from "firebase/firestore";
 import { storage } from "../hook/firebase.config";
-import { normalizeClass } from "vue";
 import { ref, uploadBytes } from "firebase/storage";
 
 export const useStoreDatosPersonales = defineStore("datosPersonales", {
@@ -21,9 +20,11 @@ export const useStoreDatosPersonales = defineStore("datosPersonales", {
         console.log("Subido el archivo!");
       });
     },
+
     /**
      * Funcion que coge datos de firestone
      */
+    
     async setDatosCurriculum() {
       const curriculumRef = collection(db, "curriculum");
       const consulta = query(curriculumRef);

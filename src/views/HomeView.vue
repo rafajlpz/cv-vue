@@ -76,6 +76,8 @@
   margin-right: auto;
 
   max-width: 62.5rem;
+  height: 100vh;
+  /* margin-bottom: 1rem; */
 
   -webkit-box-shadow: 44px 29px 23px 6px rgba(161, 156, 161, 0.62);
   -moz-box-shadow: 44px 29px 23px 6px rgba(161, 156, 161, 0.62);

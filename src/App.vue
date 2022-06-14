@@ -1,7 +1,7 @@
 <template>
   <mi-menu :correo="store.getEmailUser"></mi-menu>
   <router-view />
-  <!-- <mi-footer></mi-footer> -->
+  <mi-footer></mi-footer>
 
 </template>
 
@@ -15,7 +15,8 @@
   box-sizing: border-box;
 }
 #app{
-  
+  height: 100vh;
+  /* margin-bottom: 10rem; */
 }
 
 body {
