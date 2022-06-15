@@ -1,7 +1,17 @@
 <template>
-  <div class="container-body">
+  <div class="contenido">
+    <article class="carta">
+      <div class="carta_contenido">
+        <h3 class="carta_titulo">Ficha 1</h3>
+        <span class="carta_subtitulo">Area programacion</span>
+        <p class="carta_descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, ut?</p>
+      </div>
+    </article>
+  </div>
+
+  <!-- <div class="container-body">
     <div class="tarjeta-container">
-      <!-- <h1 v-for="(valor,index) in store.curriculum" :key="index">{{valor.titulo}}</h1> -->
+    
 
       <h6 class="cssprueba">
         {{
@@ -22,7 +32,7 @@
       <div class="footer-tarjeta">github/rafajlpz</div>
     </div>
   <img :src="url" alt="Alpaquita">
-  </div>
+  </div> -->
 </template>
 
 <script setup>
@@ -33,11 +43,9 @@
 
 import { useStoreDatosPersonales } from "@/store/datosPersonales.js";
 import { getURL } from "@/hook/firebase.cloud";
-import {ref} from "vue";
+import { ref } from "vue";
 
 const url = ref("");
-
-
 
 const datos = useStoreDatosPersonales();
 datos.setDatosCurriculum();
@@ -45,22 +53,78 @@ datos.setDatosCurriculum();
 const store = useStoreDatosPersonales();
 store.setDatosCurriculum();
 
-
-(async ()=>{
+(async () => {
   try {
     url.value = await getURL();
   } catch (error) {
-    alert(error.message)
+    alert(error.message);
   }
-
 })();
-
-
-
 </script>
 
 <style>
-.container-body {
+.contenido{
+   display:flex; 
+   justify-content: center; 
+   align-items: center; 
+}
+.carta {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  color: #a18a96;
+  background: url(../assets/avatar2.svg);
+  background-size: cover;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.carta_contenido {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 20px;
+  background-color: #fff;
+  border-top-left-radius: 20px;
+  transform: translateY(70px);
+  transition: transform 0.25s;
+}
+.carta_contenido::before {
+  content: '';
+  position: absolute;
+  top: -47px;
+  right: -45px;
+  width: 100px;
+  height: 100px;
+  transform: rotate(-175deg);
+  border-radius: 50%;
+  box-shadow: inset 48px 48px #fff;
+}
+
+.carta_titulo {
+  color: #6a515e;
+  line-height: 15px;
+  
+}
+.carta_subtitulo {
+  display: block;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+.carta_descripcion {
+  font-size: 14px;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+.carta:hover .carta_contenido {
+  transform: translateY(0);
+}
+.carta:hover .carta_descripcion {
+  opacity: 1;
+  transition-delay: 0.25s;
+}
+
+/* .container-body {
   display: flex;
 }
 .tarjeta-container {
@@ -87,9 +151,9 @@ store.setDatosCurriculum();
   justify-content: center;
   align-items: center;
 }
-.cssprueba{
+.cssprueba {
   background-color: red;
   border: 1px solid black;
   font-size: 1rem;
-}
+} */
 </style>

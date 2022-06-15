@@ -4,7 +4,7 @@
     Curriculum</router-link>
     <router-link to="/contacto">Ficha</router-link>
     <router-link to="/about">Random</router-link>
-    <router-link to="/vistaperfil">Perfil</router-link>
+    <router-link to="/vistaperfil">Cargador</router-link>
     <span class="correo">{{correo}}</span> 
     
    

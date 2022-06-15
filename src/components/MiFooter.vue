@@ -11,7 +11,7 @@
 .main-footer {
   /* margin-top: 1rem;
   position:fixed; */
-  display: flex;
+  display: block;
   position: fixed;
   left: 0;
   bottom: 0;
