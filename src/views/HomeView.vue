@@ -74,6 +74,7 @@
 .main-home {
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 2.5rem;
 
   max-width: 62.5rem;
   height: 100vh;
