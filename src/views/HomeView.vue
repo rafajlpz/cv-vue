@@ -61,8 +61,20 @@
                 : ""
             }}
           </li>
-          <li>{{ data.Formacion.Titulo4 }}</li>
-          <li>{{ data.Formacion.Titulo2 }}</li>
+          <li>
+            {{
+              store.curriculum[2] && store.curriculum[2].titulo
+                ? store.curriculum[2].titulo
+                : ""
+            }}
+          </li>
+          <li>
+            {{
+              store.curriculum[3] && store.curriculum[3].titulo
+                ? store.curriculum[3].titulo
+                : ""
+            }}
+          </li>
         </ul>
       </div>
     </div>
@@ -70,15 +82,13 @@
 </template>
 
 <style>
-
 .main-home {
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 2.5rem;
+  /* margin-bottom: 2.5rem; */
 
   max-width: 62.5rem;
   height: 100vh;
-  /* margin-bottom: 1rem; */
 
   -webkit-box-shadow: 44px 29px 23px 6px rgba(161, 156, 161, 0.62);
   -moz-box-shadow: 44px 29px 23px 6px rgba(161, 156, 161, 0.62);
@@ -149,16 +159,16 @@
   list-style-type: square;
   padding: 5px;
 }
-::-webkit-scrollbar{
+::-webkit-scrollbar {
   display: none;
 }
 .formacion {
   display: flex;
   overflow: scroll;
 
-  overflow: -webkit-overflow-scrolling;  
+  overflow: -webkit-overflow-scrolling;
   -webkit-overflow-scrolling: touch;
-  
+
   scrollbar-width: none;
   scroll-behavior: smooth;
   grid-area: formacion;
